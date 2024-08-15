@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malaysian Cuisine Recipes</title>
+    <link rel="stylesheet" href="nav_footer.css">
+    <link rel="stylesheet" href="recipe.css">
+</head>
+<body>
+    <header>
+        <!--Navigation bar-->
+        <nav class="navbar">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="recipe.html" class="active">Recipe</a></li>
+                <li><a href="cultural_insights.html">Cultural Insights</a></li>
+                <li><a href="restaurant_guide.html">Restaurant Guide</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="blog.html">Personal Blog</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+            </ul>
+        </nav>
+        <div class="logo">
+            <img src="images/logo_brown.png" alt="Makan Makan Malaysia Logo">
+        </div>
+        <div class="nav-buttons">
+            <a href="login.html" class="btn btn-login">Login</a>
+            <a href="signup.html" class="btn btn-signup">Signup</a>
+        </div>
+    </header>
+
+    <!--Navigation for Recipe page-->
+    <div class="header-content">
+        <h1>Malaysian Cuisine Recipes</h1>
+        <p>Discover the rich flavors and diverse culinary traditions of Malaysia</p>
+        <div class="filter-container">
+            <button class="filter-button active" data-category="all">All</button>
+            <button class="filter-button" data-category="main">Main Dishes</button>
+            <button class="filter-button" data-category="sides">Desserts/Sides</button>
+            <button class="filter-button" data-category="soup">Soups</button>
+        </div>
+    </div>
+
+    <!--Recipes-->
+    <div class="recipe-container" id="recipeContainer"></div>
+
+    <!--Go To Top button-->
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><span class="material-symbols-outlined">
+        ^
+        </span></button>
+        
+    <!--Footer-->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="recipe.html">Recipes</a></li>
+                    <li><a href="cultural_insights.html">Cultural Insights</a></li>
+                    <li><a href="restaurant_guide.html">Restaurant Guide</a></li>
+                    <li><a href="community.html">Community</a></li>
+                    <li><a href="blog.html">Personal Blog</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section social">
+                <h3>Social Media</h3>
+                <img src="images/logo_brown.png" alt="Logo" id="logo">
+                <div class="footer-section social-info">
+                    <p>Follow us on: 
+                        <a href="https://www.facebook.com/"> 
+                            <img src="images/about_us/facebook.png" alt="Facebook">
+                        </a>
+                        <a href="https://www.instagram.com/">
+                            <img src="images/about_us/instagram.png" alt="Instagram">
+                        </a>
+                        <a href="https://x.com/">
+                            <img src="images/about_us/twitter.png" alt="Twitter">
+                        </a>
+                    </p>
+                </div>               
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Makan-makan Malaysia. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="recipe.js"></script>
+</body>
+</html>

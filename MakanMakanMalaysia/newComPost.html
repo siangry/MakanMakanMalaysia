@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malaysia Cuisine - Community</title>
+    <link rel="stylesheet" href="nav_footer.css">
+    <link rel="stylesheet" href="blog&com.css">
+</head>
+
+<body>
+    <!--Navigation bar-->
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="recipe.html">Recipes</a></li>
+                <li><a href="cultural_insights.html">Cultural Insights</a></li>
+                <li><a href="restaurant_guide.html">Restaurant Guide</a></li>
+                <li><a href="community.html" class="active">Community</a></li>
+                <li><a href="blog.html">Personal Blog</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+            </ul>
+        </nav>
+        <div class="logo">
+            <img src="images/logo_brown.png" alt="Makan Makan Malaysia Logo">
+        </div>
+        <div class="nav-buttons">
+            <a href="login.html" class="btn btn-login">Login</a>
+            <a href="signup.html" class="btn btn-signup">Signup</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Community</h1>
+        <h2>Create a New Post</h2>
+        <form id="postForm" onsubmit="createPost(event)">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" id="title" placeholder="Enter the title of your post" required>
+            </div>
+            <div class="form-group">
+                <label for="content">Content</label>
+                <textarea id="content" rows="5" placeholder="Write your post content here"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="image">Attach Image (Optional)</label>
+                <input type="file" id="image" accept="image/*">
+            </div>
+            <button class="upload-button" onclick="createPost()">Upload</button>
+            <button class="cancel-button" onclick="cancel()">Cancel</button>
+        </form>
+    </div>
+
+    <!--Footer-->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="recipe.html">Recipes</a></li>
+                    <li><a href="cultural_insights.html">Cultural Insights</a></li>
+                    <li><a href="restaurant_guide.html">Restaurant Guide</a></li>
+                    <li><a href="community.html">Community</a></li>
+                    <li><a href="blog.html">Personal Blog</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section social">
+                <h3>Social Media</h3>
+                <img src="images/logo_brown.png" alt="Logo" id="logo">
+                <div class="footer-section social-info">
+                    <p>Follow us on: 
+                        <a href="https://www.facebook.com/"> 
+                            <img src="images/about_us/facebook.png" alt="Facebook">
+                        </a>
+                        <a href="https://www.instagram.com/">
+                            <img src="images/about_us/instagram.png" alt="Instagram">
+                        </a>
+                        <a href="https://x.com/">
+                            <img src="images/about_us/twitter.png" alt="Twitter">
+                        </a>
+                    </p>
+                </div>               
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Makan-makan Malaysia. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function createPost(event) {
+            event.preventDefault();
+
+            const title = document.getElementById('title').value;
+            const content = document.getElementById('content').value;
+            const imageFile = document.getElementById('image').files[0];
+            const timestamp = new Date().toLocaleString();
+            const username = 'Username';
+
+            const newPost = {
+                title: title,
+                content: content,
+                timestamp: timestamp,
+                username: username,
+                comments: []
+            };
+
+            if (imageFile) {
+                const reader = new FileReader();
+                reader.onloadend = function () {
+                    newPost.image = reader.result;
+                    savePost(newPost);
+                };
+                reader.readAsDataURL(imageFile);
+            } else {
+                savePost(newPost);
+            }
+        }
+
+        function savePost(post) {
+            let posts = JSON.parse(localStorage.getItem('communityPosts')) || [];
+            posts.unshift(post);
+            localStorage.setItem('communityPosts', JSON.stringify(posts));
+            window.location.href = 'community.html';
+        }
+
+        function cancel() {
+            window.location.href = 'community.html';
+        }
+    </script>
+</body>
+
+</html>

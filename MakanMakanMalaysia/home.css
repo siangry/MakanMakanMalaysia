@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Playfair Display', serif;
+}
+
+/*Home: starting page*/
+.banner {
+    width:100%;
+    height:380px;
+    background-image:  url("images/logo_beige.png"),
+    url("images/home/bountiful-spread-southeast-asian-cuisine_186666-3400.avif");
+    background-repeat:no-repeat;
+    background-position:center, top left;
+    background-size:300px, 100%;
+}
+
+
+/*Home: Discover Malaysia Cuisine*/
+.body{
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+    background: linear-gradient(315deg, rgba(44,64,33,1) 23%, rgba(194,178,128,1) 71%, rgba(234,221,202,1) 100%);
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.intro{
+    border: 15px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    background: rgb(218,160,109);
+    background: linear-gradient(90deg, rgba(218,160,109,1) 5%, rgba(194,178,128,1) 35%, rgba(234,221,202,1) 79%);
+}
+.intro p{
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.section1 {
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+}
+
+.left-column {
+    flex: 1;
+}
+.right-column {
+    margin-top: 50px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1 {
+    margin-top: 0;
+}
+.video-placeholder {
+    background-color: #f0f0f0;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.image-container {
+    background-color: #d4c0a5;
+    border-radius: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+.image-container:hover {
+    transform: scale(1.05);
+}
+
+.oval-image {
+    width: 45%;
+    text-align: center;
+}
+.oval-image img {
+    padding: 20px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+figcaption {
+    margin-top: 15px;
+    margin-left:20px;
+    font-size: 0.9em;
+}
+
+/*Home: Global Popularity of Malaysian Food*/
+.section2 {
+    position: relative;
+    padding-top: 100px; 
+}
+
+.wrapper {
+    border: 1px; 
+    position: relative; 
+    margin-top: 10px;
+    width: 80vw;
+    transform: translateX(-50%);
+    left: 50%;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.contain {
+    width: 28vmin;
+    height: 28vmin;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1em 0;
+    position: relative;
+    font-size: 16px;
+    border-radius: 0.5em;
+    background-color: #d4c0a5;
+    border-bottom: 10px solid #503106;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    text-align: center;
+}
+
+span.num {
+color: #503106;
+display: grid;
+place-items: center;
+font-weight: 600;
+font-size: 3em;
+}
+span.text { 
+color: #503106;
+font-size: 1em;
+text-align: center;
+pad: 0.7em 0;
+font-weight: 400;
+line-height: 0;
+}
+
+.section2 .image{
+    position: center;
+    margin-top: 25px;
+    margin-left: 7%;
+    margin-bottom: 50px;
+}
+@media screen and (max-width: 1024px) {
+.wrapper {
+    width: 85vw;
+}
+.contain {
+    height: 26vmin;
+    width: 26vmin;
+    font-size: 12px;
+}
+}
+@media screen and (max-width: 768px) {
+    .wrapper {
+    width: 90vw;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.contain {
+    width: calc(50% - 40px);
+    height: 30vmin;
+    font-size: 14px;
+}
+}
+@media screen and (max-width: 480px) {
+    .wrapper {
+        gap: 15px;
+    }
+    .contain {
+        width: 100%;
+        height: 25vmin;
+        font-size: 8px;
+    }
+}
+  
+/*Home: Social Media and Malaysian Cuisine*/
+.section3 {
+    display: flex;
+    max-height: 2.5 em;
+    max-width: 90%;
+}
+.content3{
+    flex-basis: 30%;
+    border:1px;
+    margin-top: 20px;
+    border-radius: 10px;
+   
+}
+.content3 h2{
+    background-color: #503106;
+    color: white;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 20%;
+    padding: 10px;
+}
+.ins {
+    padding: 10px;
+    margin: 0 auto;
+    width: 500px;
+    max-height: 660px; 
+    overflow: auto; 
+}
+        
+.section h2 {
+font-size: 24px;
+margin-bottom: 10px;
+}
+
+.container {
+font-size: 16px;
+line-height: 1.5;
+}
+
+.video-container {
+flex-basis: 48%;
+position: relative;
+padding-bottom: 56.25%; 
+height: 0;
+overflow: hidden;
+}
+
+.video-container iframe {
+top: 0;
+left: 0;
+width: 50%;
+height: 50%;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .section {
+        flex-basis: 100%;
+    }
+
+    .video-container {
+        flex-basis: 100%;
+        padding-bottom: 56.25%;
+    }
+}
+
+
+/*Home: Local Legends*/
+.section4 {
+    padding: 30px;
+    border:1px;
+    margin-left: 10%;
+    margin-bottom: 40px;
+    margin-right: 10%;
+    margin-top: 10px;
+    text-align: center;
+}
+.section4 p{
+    background-color: #ffefd9;
+    font-weight: 500;
+    border-radius: 15px;
+}
+
+
+/*Home: A Tourist Attraction*/
+.section5 {
+    column-count:2;
+    column-gap: 40px;
+    column-rule-width: 1px;
+    column-rule-style: solid;
+    column-rule-color: hsl(48 12.5% 39.2%);
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.sec5-1 h2 {
+    margin-bottom: 10px;
+}
+
+.sec5-1 p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.sec5-1 img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+.sec5-2 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.sec5-2 img {
+    max-width: 80%;
+    height: auto;
+}
+
+.sec5-2 p {
+    font-size: 1em;
+    color: #555;
+}

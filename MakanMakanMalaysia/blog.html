@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malaysia Cuisine - Personal Blog</title>
+    <link rel="stylesheet" href="nav_footer.css">
+    <link rel="stylesheet" href="blog&com.css">
+</head>
+
+<body>
+    <!--Navigation bar-->
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="recipe.html">Recipes</a></li>
+                <li><a href="cultural_insights.html">Cultural Insights</a></li>
+                <li><a href="restaurant_guide.html">Restaurant Guide</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="blog.html" class="active">Personal Blog</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+            </ul>
+        </nav>
+        <div class="logo">
+            <img src="images/logo_brown.png" alt="Makan Makan Malaysia Logo">
+        </div>
+        <div class="nav-buttons">
+            <a href="login.html" class="btn btn-login">Login</a>
+            <a href="signup.html" class="btn btn-signup">Signup</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Personal Blog</h1>
+
+        <!-- User Profile Section -->
+        <div class="profile">
+            <div class="cover-photo"></div>
+            <div class="profile-details">
+                <img src="images/blog_comm/profile_img.jpg" id="profile_pic" alt="Profile Image">
+                <div class="profile-info">
+                    <h2>Say The Name</h2>
+                    <p><strong>Bio: I love Malaysian cuisine!</strong> </p>
+                    <p>Followers: 200 | Following: 120</p>
+                    <a href="newBlogPost.html" class="upload-button">Upload New</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Posts Section -->
+        <h2>Your Posts</h2>
+        <div id="posts"></div>
+    </div>
+
+    <!--Go To Top button-->
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><span class="material-symbols-outlined">
+        ^
+        </span></button>
+
+        <!--Footer-->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="recipe.html">Recipes</a></li>
+                        <li><a href="cultural_insights.html">Cultural Insights</a></li>
+                        <li><a href="restaurant_guide.html">Restaurant Guide</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="blog.html">Personal Blog</a></li>
+                        <li><a href="about_us.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section social">
+                    <h3>Social Media</h3>
+                    <img src="images/logo_brown.png" alt="Logo" id="logo">
+                    <div class="footer-section social-info">
+                        <p>Follow us on: 
+                            <a href="https://www.facebook.com/"> 
+                                <img src="images/about_us/facebook.png" alt="Facebook">
+                            </a>
+                            <a href="https://www.instagram.com/">
+                                <img src="images/about_us/instagram.png" alt="Instagram">
+                            </a>
+                            <a href="https://x.com/">
+                                <img src="images/about_us/twitter.png" alt="Twitter">
+                            </a>
+                        </p>
+                    </div>               
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Makan-makan Malaysia. All rights reserved.</p>
+            </div>
+        </footer>
+
+    <script>
+        const profilePicElement = document.getElementById('profile_pic');
+        localStorage.setItem('profilePicSrc', profilePicElement.src);
+
+        let posts = JSON.parse(localStorage.getItem('blogPosts'));
+        if (!posts) {
+            posts = [];
+            const post1 = {
+                    title: "A New Malaysian cuisine blogger",
+                    content: "Hello everyone! Start from today, I will share the delicious traditional cuisine in Malaysia! Follow me and enjoy the Malaysia food together!",
+                    timestamp: "08/12/2024 12:00:00",
+                    image: "images/blog_comm/blog1.jpg"};
+            posts.push(post1);
+            localStorage.setItem('blogPosts', JSON.stringify(posts));
+        }
+
+        
+        loadPosts();
+
+        function loadPosts() {
+            const posts = JSON.parse(localStorage.getItem('blogPosts')) || [];
+            const profilePicSrc = localStorage.getItem('profilePicSrc');
+            const postsContainer = document.getElementById('posts');
+            postsContainer.innerHTML = '';
+
+            for (var i = 0; i < posts.length; i++) {
+                var post = posts[i];
+                var postDiv = document.createElement('div');
+                postDiv.className = 'post';
+                postDiv.dataset.index = i;
+
+                var postHtml = '<div class="post-header">';
+                postHtml += '<div class="user-icon"><img src="' + profilePicSrc + '" alt="User Profile"></div>';
+                postHtml += '<span>Say The Name • ' + new Date(post.timestamp).toLocaleString() + '</span>';
+                postHtml += '<button class="delete-button" onclick="deletePost(' + i + ')">Delete</button></div>';
+                postHtml += '<div class="post-content">';
+                postHtml += '<h3>' + post.title + '</h3>';
+                postHtml += '<p>' + post.content + '</p>';
+                if (post.image) {
+                    postHtml += '<img src="' + post.image + '" alt="Attached Image">';
+                }
+                postHtml += '</div>';
+
+                postDiv.innerHTML = postHtml;
+                postsContainer.appendChild(postDiv);
+            }
+        }
+
+        function deletePost(index) {
+            let posts = JSON.parse(localStorage.getItem('blogPosts')) || [];
+            posts.splice(index, 1); // Delete the post at the given index
+            localStorage.setItem('blogPosts', JSON.stringify(posts)); // Update the local storage
+            loadPosts(); // Reload posts to reflect changes
+        }
+
+        //Go To Top button
+        let mybutton = document.getElementById("myBtn");
+            
+        window.onscroll = function() {scrollFunction()};
+            
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+            } else {
+            mybutton.style.display = "none";
+            }
+        }
+        
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+    </script>
+</body>
+</html>

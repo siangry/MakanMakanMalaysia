@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultural Insights</title>
+    <link rel="stylesheet" href="nav_footer.css">
+    <link rel="stylesheet" href="ci_styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="recipe.html">Recipe</a></li>
+                <li><a href="cultural_insights.html" class="active">Cultural Insights</a></li>
+                <li><a href="restaurant_guide.html">Restaurant Guide</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="blog.html">Personal Blog</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+            </ul>
+        </nav>
+        <div class="logo">
+            <img src="images/logo_brown.png" alt="Makan Makan Malaysia Logo">
+        </div>
+        <div class="nav-buttons">
+            <a href="login.html" class="btn btn-login">Login</a>
+            <a href="signup.html" class="btn btn-signup">Signup</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="cultural-insights" class="ci">
+
+            <!--main page of cultural insight-->
+            <div class="ci-main">
+                <h1>Cultural Insights</h1>
+                <p>Multi-ethnic cuisine keeps the delicacy alive</p>
+
+                <!--sub sections-->
+                <div class="ci-sections">
+                    <article class="ci-section">
+                        <img src="images/ci/quotation.png" alt="Quotation" class="quo">
+                        <h2>History</h2>
+                        <p>Comprehensive overview of the historical evolution of Malaysian cuisine, tracing its origins and development over time.</p>
+                        <a href="#history" class="ci-arrow-down">
+                            <img src="images/ci/arrow-down.png" alt="Down arrow">
+                        </a>
+                    </article>   
+                    <article class="ci-section">
+                        <img src="images/ci/quotation.png" alt="Quotation" class="quo">
+                        <h2>Traditions</h2>
+                        <p>Explore the traditional cooking methods and ingredients that are fundamental to Malaysian cuisine, emphasizing their cultural significance.</p>
+                        <a href="#traditions" class="ci-arrow-down">
+                            <img src="images/ci/arrow-down.png" alt="Down arrow">
+                        </a>
+                    </article> 
+                    <article class="ci-section">
+                        <img src="images/ci/quotation.png" alt="Quotation" class="quo">
+                        <h2>Interviews</h2>
+                        <p>Personal insights and expert opinions from chefs, food historians, and culinary experts about Malaysian cuisine.</p>
+                        <a href="#interviews" class="ci-arrow-down">
+                            <img src="images/ci/arrow-down.png" alt="Down arrow">
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!--History section-->
+        <section id="history" class="ci-content">
+            <div class="ci-his-container">
+                <div class="ci-his-left">
+                    <h2>History of Malaysia Cuisine</h2>
+                    <p class="ci-his-left-desc">
+                        Malaysian cuisine has a rich history influenced by various cultures, including Malay, Chinese, Indian, Thai, Javanese, and Sumatran. The strategic location of Malaysia along ancient trade routes brought traders, settlers, and colonial powers, each contributing to the culinary landscape.
+                    </p>
+                    <ul class="ci-his-timeline">
+                        <li class="ci-his-active" data-era="pre-colonial">Pre-colonial Era</li>
+                        <li data-era="colonial">Colonial Influence</li>
+                        <li data-era="chinese">Chinese Influence</li>
+                        <li data-era="indian">Indian Influence</li>
+                        <li data-era="modern">Modern Era</li>
+                    </ul>
+                </div>
+                <div class="ci-his-right">
+                    <img src="images/ci/precolonial.webp" alt="Pre-colonial Era" id="ci-his-right-img">
+                    <p id="ci-his-right-desc">
+                        Indigenous ingredients like rice, coconut, bananas, and spices were staples. Cooking methods included grilling, steaming, and boiling.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!--Traditions section-->
+        <section id="traditions" class="ci-content">
+            <div class="ci-tdt-container">
+                <h2>Traditions on Unique Ingredients</h2>
+                <div class="ci-tdt-slider" id="ci-tdt-slider">
+                    <!--First page-->
+                    <div class="ci-tdt-slide">
+                        <div class="ci-tdt-content">
+                            <img src="images/ci/galangal_lemongrass.jpg" alt="Galangal and Lemongrass">
+                            <h3>Galangal and Lemongrass</h3>
+                            <p>Essential for many Malay dishes, adding aromatic flavors.</p>
+                        </div>
+                        <div class="ci-tdt-content">
+                            <img src="images/ci/belanca.jpeg" alt="Belacan (Shrimp Paste)">
+                            <h3>Belacan (Shrimp Paste)</h3>
+                            <p>A pungent ingredient used in sambals and curries.</p>
+                        </div>
+                        <div class="ci-tdt-content">
+                            <img src="images/ci/coconut_milk.jpg" alt="Coconut Milk">
+                            <h3>Coconut Milk</h3>
+                            <p>Integral to many curries and desserts, providing a creamy texture and rich taste.</p>
+                        </div>
+                        <div class="ci-tdt-content">
+                            <img src="images/ci/pandan.webp" alt="Pandan Leaves">
+                            <h3>Pandan Leaves</h3>
+                            <p>Used for their fragrance in both sweet and savory dishes.</p>
+                        </div>
+                    </div>
+                    <!--Second page-->
+                    <div class="ci-tdt-slide">
+                        <div class="ci-tdt-content">
+                            <img src="images/ci/turmeric.jpg" alt="Turmeric">
+                            <h3>Turmeric</h3>
+                            <p>Imparts a vibrant yellow color and a warm, earthy flavor to dishes.</p>
+                        </div>
+                        <div class="ci-tdt-content">
+                            <img src="images/ci/driedshrimps.webp" alt="Dried Shrimp">
+                            <h3>Dried Shrimp</h3>
+                            <p>Used to add umami flavor to a variety of dishes.</p>
+                        </div>
+                        <div class="ci-tdt-content">
+                            <img src="images/ci/kaffir-lime-leaves.webp" alt="Kaffir Lime Leaves">
+                            <h3>Kaffir Lime Leaves</h3>
+                            <p>Fragrant leaves used in soups, curries, and marinades, adding a distinctive citrusy aroma and flavor.</p>
+                        </div>
+                        <div class="ci-tdt-content">
+                            <img src="images/ci/tamarind.jpg" alt="Tamarind">
+                            <h3>Tamarind</h3>
+                            <p>Used to add a sour note to dishes and make refreshing tamarind drinks.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="ci-tdt-prev" onclick="moveSlide(-1)">&#8249;</button>
+                <button class="ci-tdt-next" onclick="moveSlide(1)">&#8250;</button>
+            </div>
+        </section>
+
+        <!--Interviews section-->
+        <section id="interviews" class="ci-content">
+            <div class="ci-itv">
+                <h2>Interviews with Chefs and Food Experts</h2>
+                <div class="ci-itv-image-grid">
+                    <a href="https://cafechefwan.my/" class="ci-itv-img-container">
+                        <img src="images/ci/chefwan.jpg" alt="Chef Wan" class="ci-itv-img">
+                        <div class="ci-itv-overlay">
+                            <div class="ci-itv-desc">
+                                <h3>Chef Wan (Redzuawan Ismail)</h3>
+                                <p>Malaysia's culinary ambassador known for promoting Malaysian food globally. He shares stories about traditional recipes and modern twists.</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://www.normanmusa.com/" class="ci-itv-img-container">
+                        <img src="images/ci/chefnormanmusa.jpg" alt="Chef Norman Musa" class="ci-itv-img">
+                        <div class="ci-itv-overlay">
+                            <div class="ci-itv-desc">
+                                <h3>Chef Norman Musa</h3>
+                                <p>A celebrity chef and author who focuses on authentic Malaysian dishes. He talks about preserving culinary heritage while adapting to contemporary tastes.</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://www.facebook.com/Debbteoh/" class="ci-itv-img-container">
+                        <img src="images/ci/debbieteoh.jpg" alt="Debbie Teoh" class="ci-itv-img">
+                        <div class="ci-itv-overlay">
+                            <div class="ci-itv-desc">
+                                <h3>Debbie Teoh</h3>
+                                <p>A Nyonya cuisine expert who discusses the unique blend of Chinese and Malay cooking in Peranakan dishes.</p>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="ci-itv-img-container">
+                        <img src="images/ci/ahmadnajibariffin.webp" alt="Ahmad Najib Ariffin" class="ci-itv-img">
+                        <div class="ci-itv-overlay">
+                            <div class="ci-itv-desc">
+                                <h3>Food Historian Ahmad Najib Ariffin</h3>
+                                <p>Provides a historical context to Malaysian cuisine, explaining how historical events and cultural exchanges shaped the current food landscape.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+        </section>
+        
+        <!--Go To Top button-->
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><span class="material-symbols-outlined">
+            arrow_upward
+            </span></button>
+    </main>
+
+    <!--Footer-->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="recipe.html">Recipes</a></li>
+                    <li><a href="cultural_insights.html">Cultural Insights</a></li>
+                    <li><a href="restaurant_guide.html">Restaurant Guide</a></li>
+                    <li><a href="community.html">Community</a></li>
+                    <li><a href="blog.html">Personal Blog</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section social">
+                <h3>Social Media</h3>
+                <img src="images/logo_brown.png" alt="Logo" id="logo">
+                <div class="footer-section social-info">
+                    <p>Follow us on: 
+                        <a href="https://www.facebook.com/"> 
+                            <img src="images/about_us/facebook.png" alt="Facebook">
+                        </a>
+                        <a href="https://www.instagram.com/">
+                            <img src="images/about_us/instagram.png" alt="Instagram">
+                        </a>
+                        <a href="https://x.com/">
+                            <img src="images/about_us/twitter.png" alt="Twitter">
+                        </a>
+                    </p>
+                </div>               
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Makan-makan Malaysia. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="ci_scripts.js"></script>
+</body>
+</html>

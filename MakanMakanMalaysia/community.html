@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malaysia Cuisine - Community</title>
+    <link rel="stylesheet" href="nav_footer.css">
+    <link rel="stylesheet" href="blog&com.css">
+</head>
+
+<body>
+    <!--Navigation bar-->
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="recipe.html">Recipes</a></li>
+                <li><a href="cultural_insights.html">Cultural Insights</a></li>
+                <li><a href="restaurant_guide.html">Restaurant Guide</a></li>
+                <li><a href="community.html" class="active">Community</a></li>
+                <li><a href="blog.html">Personal Blog</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+            </ul>
+        </nav>
+        <div class="logo">
+            <img src="images/logo_brown.png" alt="Makan Makan Malaysia Logo">
+        </div>
+        <div class="nav-buttons">
+            <a href="login.html" class="btn btn-login">Login</a>
+            <a href="signup.html" class="btn btn-signup">Signup</a>
+        </div>
+    </header>
+
+    <!--Community-->
+    <div class="container">
+        <h1>COMMUNITY</h1>
+        <a href="newComPost.html" class="upload-button">Upload New Post</a>
+        <div id="posts"></div>
+    </div>
+
+    <!--Go To Top button-->
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><span class="material-symbols-outlined">
+        ^
+        </span></button>
+
+        <!--Footer-->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="recipe.html">Recipes</a></li>
+                        <li><a href="cultural_insights.html">Cultural Insights</a></li>
+                        <li><a href="restaurant_guide.html">Restaurant Guide</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="blog.html">Personal Blog</a></li>
+                        <li><a href="about_us.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section social">
+                    <h3>Social Media</h3>
+                    <img src="images/logo_brown.png" alt="Logo" id="logo">
+                    <div class="footer-section social-info">
+                        <p>Follow us on: 
+                            <a href="https://www.facebook.com/"> 
+                                <img src="images/about_us/facebook.png" alt="Facebook">
+                            </a>
+                            <a href="https://www.instagram.com/">
+                                <img src="images/about_us/instagram.png" alt="Instagram">
+                            </a>
+                            <a href="https://x.com/">
+                                <img src="images/about_us/twitter.png" alt="Twitter">
+                            </a>
+                        </p>
+                    </div>               
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Makan-makan Malaysia. All rights reserved.</p>
+            </div>
+        </footer>
+
+    <script>
+
+
+        let posts = JSON.parse(localStorage.getItem('communityPosts'));
+        if (!posts) {
+            posts = [];
+            const post1 = {
+                title: "Welcome to Malaysia Cuisine Community!",
+                content: "This is the first post in the community. Feel free to share all about Malaysia cuisine.",
+                timestamp: "08/08/2024 12:00:00",
+                username: "Admin",
+                image: "images/logo_trans.png",
+                comments: [{ username: "anonyms", text: "A wonderful page for discussing Malaysia cuisine!!!", timestamp: "8/8/2024, 13:11:34 PM" },
+                { username: "anonyms", text: "This is friendly for foreigns who likely to know about Malaysian cuisine, thanks!", timestamp: "8/8/2024, 13:37:46 PM" }]
+            };
+            const post2 = {
+                title: "I cooked a delicious curry laksa!",
+                content: "The recipe is from my grandma, she is really good at cooking!",
+                timestamp: "08/08/2024 11:52:54",
+                username: "username",
+                image: "images/blog_comm/curry_laksa.jpg",
+                comments: [{ username: "anonyms", text: "It looks so delicious!", timestamp: "8/8/2024, 12:03:54 PM" },
+                { username: "anonyms", text: "I really interested to it! Could you share the recipe pls?", timestamp: "8/8/2024, 12:19:41 PM" },
+                { username: "anonyms", text: "Same lunch today haha! Laksa is delicious!", timestamp: "8/8/2024, 12:30:00 PM", image: "images/blog_comm/curry_laksa2.jpg" }]
+            };
+            const post3 = {
+                title: "Anyone knows what is this?",
+                content: "I received a kuih but I don't know what it is, does anyone know?",
+                timestamp: "08/09/2024 09:12:34",
+                username: "username",
+                image: "images/blog_comm/kole_kole.jpg",
+                comments: [{ username: "anonyms", text: "I also wondering", timestamp: "8/9/2024, 12:01:20 PM" },
+                { username: "anonyms", text: "This is kole-kole, a traditional Malay kuih, just like chocolate mousse cake.", timestamp: "8/10/2024, 10:45:12 AM" }]
+            };
+            posts.push(post3, post2, post1);
+            localStorage.setItem('communityPosts', JSON.stringify(posts));
+        }
+
+        loadPosts();
+
+        function loadPosts() {
+            const posts = JSON.parse(localStorage.getItem('communityPosts'));
+            const postsContainer = document.getElementById('posts');
+            postsContainer.innerHTML = '';
+
+            for (var i = 0; i < posts.length; i++) {
+                var post = posts[i];
+                var postDiv = document.createElement('div');
+                postDiv.className = 'post';
+
+                //post section
+                var postHtml = '<div class="post-header">';
+                postHtml += '<div class="user-icon"><img src="images/blog_comm/user_icon.png" id="profile_pic" alt="User Profile"></div>';
+                postHtml += '<span>Username • ' + new Date(post.timestamp).toLocaleString() + '</span>';
+                postHtml += '<button class="delete-button" onclick="deletePost(' + i + ')">Delete</button></div>';
+                postHtml += '<div class="post-content">';
+                postHtml += '<h3>' + post.title + '</h3>';
+                postHtml += '<p>' + post.content + '</p>';
+                if (post.image) {
+                    postHtml += '<img src="' + post.image + '" alt="Attached Image">';
+                }
+                postHtml += '</div>';
+
+                // comment section
+                var commentsHtml = '';
+                for (var j = 0; j < post.comments.length; j++) {
+                    var comment = post.comments[j];
+                    commentsHtml += '<div class="comment">';
+                    commentsHtml += '<strong>' + comment.username + ':</strong> ' + comment.text;
+                    commentsHtml += '<div class="timestamp">' + comment.timestamp + '</div>';
+                    if (comment.image) {
+                        commentsHtml += '<img src="' + comment.image + '" alt="Comment Image">';
+                    }
+                    commentsHtml += '</div>';
+                }
+                postHtml += commentsHtml;
+
+                // add comment to post
+                postHtml += '<div class="add-comment">';
+                postHtml += '<input type="text" placeholder="Type a comment..." id="commentText' + i + '" style="width: 60%;">';
+                postHtml += '<input type="file" id="commentImage' + i + '" accept="image/*">';
+                postHtml += '<button class="upload-button" onclick="comment(' + i + ')">Comment</button>';
+                postHtml += '</div>';
+
+                postHtml += '</div>';
+                postDiv.innerHTML = postHtml;
+                postsContainer.appendChild(postDiv);
+            }
+        }
+
+        function deletePost(index) {
+            let posts = JSON.parse(localStorage.getItem('communityPosts')) || [];
+            posts.splice(index, 1);
+            localStorage.setItem('communityPosts', JSON.stringify(posts));
+            loadPosts();
+        }
+
+        function comment(index) {
+            const textInput = document.getElementById(commentText$,{index});
+            const commentText = textInput.value.trim();
+            const imageInput = document.getElementById(commentImage$,{index});
+            const imageFile = imageInput.files[0];
+
+            if (commentText !== '') {
+                const now = new Date();
+                const timestamp = now.toLocaleString();
+                const reader = new FileReader();
+
+                reader.onload = function (event) {
+                    const newComment = {
+                        username: 'anonyms',
+                        text: commentText,
+                        timestamp: timestamp,
+                        image: imageFile ? event.target.result : null
+                    };
+
+                    let posts = JSON.parse(localStorage.getItem('communityPosts')) || [];
+                    if (!posts[index].comments) {
+                        posts[index].comments = [];
+                    }
+                    posts[index].comments.push(newComment);
+                    localStorage.setItem('communityPosts', JSON.stringify(posts));
+                    loadPosts();
+                    textInput.value = '';
+                    imageInput.value = '';
+                };
+
+                if (imageFile) {
+                    reader.readAsDataURL(imageFile);
+                } else {
+                    reader.onload();
+                }
+            }
+        }
+
+        // Go To Top button
+        let mybutton = document.getElementById("myBtn");
+
+        window.onscroll = function() {scrollFunction()};
+            images/blog_comm/user_icon.png
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+            
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+    </script>
+</body>
+</html>

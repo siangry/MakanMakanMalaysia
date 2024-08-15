@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makan Makan Malaysia - Restaurant Guide</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="nav_footer.css">
+    <link rel="stylesheet" href="restaurant_guide.css">
+</head>
+<body>
+    <!--Navigation bar-->
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="recipe.html">Recipes</a></li>
+                <li><a href="cultural_insights.html">Cultural Insights</a></li>
+                <li><a href="restaurant_guide.html" class="active">Restaurant Guide</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="blog.html">Personal Blog</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+            </ul>
+        </nav>
+        <div class="logo">
+            <img src="images/logo_brown.png" alt="Makan Makan Malaysia Logo">
+        </div>
+        <div class="nav-buttons">
+            <a href="login.html" class="btn btn-login">Login</a>
+            <a href="signup.html" class="btn btn-signup">Signup</a>
+        </div>
+    </header>
+
+    <!-- Restaurant Guide Section -->
+    <section id="restaurant-guide" class="container">
+        <h2 class="section-title">Restaurant Guide</h2>
+        <p class="header-text">Guidance for the rich flavors and diverse culinary traditions of Malaysia</p>
+        <div class="row">
+            <!-- Restaurant Card 1 -->
+            <div class="col-md-4">
+                <div class="card restaurant-card">
+                    <img src="images/rest_guide/tomyam_seafood.jpg" class="card-img-top" alt="Nur Nasuha Tomyam Seafood">
+                    <div class="card-body">
+                        <h5 class="card-title">Nur Nasuha Tomyam Seafood</h5>
+                        <p class="card-location">KAMPAR, PERAK</p>
+                        <div class="card-details">
+                            <p class="card-text">Rating: ★★★★☆</p>
+                            <p class="card-text">Review: Nur Nasuha Tomyam Seafood offers delicious 
+                                affordable fried rice, making it a top choice for those seeking 
+                                flavorful dishes at unbeatable prices.</p>                      
+                            <a href="https://maps.app.goo.gl/1fGaGGXmj1cp4Sc78" target="_blank">
+                                <button class="btn-map">Google Maps</button>
+                            </a>
+                            <a href="#" data-toggle="modal" data-target="#menuModal1">
+                                <button class="btn-menu">Suggested Menu</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Restaurant Card 2 -->
+            <div class="col-md-4">
+                <div class="card restaurant-card">
+                    <img src="images/rest_guide/youji.jpg" class="card-img-top" alt="Yew Kei Seafood Restaurant">
+                    <div class="card-body">
+                        <h5 class="card-title">Yew Kei Seafood Restaurant</h5>
+                        <p class="card-location">TUALANG, PERAK</p>
+                        <div class="card-details">
+                            <p class="card-text">Rating: ★★★★☆</p>
+                            <p class="card-text">Review: Yew Kei Seafood Restaurant is renowned for its incredibly fresh 
+                                seafood, offering a delightful dining experience with dishes that capture the true 
+                                essence of the ocean. Perfect for seafood lovers seeking quality and flavor in every bite</p>
+                            <a href="https://maps.app.goo.gl/GVacaCqwfbqnnQFD6" target="_blank">
+                                <button class="btn-map">Google Maps</button>
+                            </a>
+                            <a href="#" data-toggle="modal" data-target="#menuModal2">
+                                <button class="btn-menu">Suggested Menu</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Restaurant Card 3 -->
+            <div class="col-md-4">
+                <div class="card restaurant-card">
+                    <img src="images/rest_guide/longjing.png" class="card-img-top" alt="Kedai Kopi Lung Ching">
+                    <div class="card-body">
+                        <h5 class="card-title">Kedai Kopi Lung Ching</h5>
+                        <p class="card-location">SIBU, SARAWAK</p>
+                        <div class="card-details">
+                            <p class="card-text">Rating: ★★★★☆</p>
+                            <p class="card-text">Review: Kedai Kopi Lung Ching is beloved for its local cuisine, especially 
+                                the unique Sarawak dishes like kampua and golo mee. A standout is the rice noodle with 
+                                pickled vegetables(Zāo cài fěn gàn), drawing many visitors with its authentic flavors and 
+                                affordable prices.</p>
+                            <a href="https://maps.app.goo.gl/6EUPjFaWjosAcL5y9" target="_blank">
+                                <button class="btn-map">Google Maps</button>
+                            </a>
+                            <a href="#" data-toggle="modal" data-target="#menuModal3">
+                                <button class="btn-menu">Suggested Menu</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Restaurant Card 4 -->
+            <div class="col-md-4">
+                <div class="card restaurant-card">
+                    <img src="images/rest_guide/gem.png" class="card-img-top" alt="Gem Restaurant Damansara">
+                    <div class="card-body">
+                        <h5 class="card-title">Gem Restaurant Damansara</h5>
+                        <p class="card-location">PETALING JAYA, SELANGOR</p>
+                        <div class="card-details">
+                            <p class="card-text">Rating: ★★★★★</p>
+                            <p class="card-text">Review: Gem Restaurant Damansara delivers a fantastic dining experience 
+                                with superb Indian cuisine, attentive service, and great value. The authentic flavors 
+                                and reasonable prices, make it a must-visit for Indian food lovers.</p>
+                            <a href="https://maps.app.goo.gl/vjaGjiAkj7b3E3Wn7" target="_blank">
+                                <button class="btn-map">Google Maps</button>
+                            </a>
+                            <a href="#" data-toggle="modal" data-target="#menuModal4">
+                                <button class="btn-menu">Suggested Menu</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Restaurant Card 5 -->
+            <div class="col-md-4">
+                <div class="card restaurant-card">
+                    <img src="images/rest_guide/hejiu.jpg" class="card-img-top" alt="Ho Kow Hainam Kopitiam">
+                    <div class="card-body">
+                        <h5 class="card-title">Ho Kow Hainam Kopitiam</h5>
+                        <p class="card-location">KUALA LUMPUR</p>
+                        <div class="card-details">
+                            <p class="card-text">Rating: ★★★★★</p>
+                            <p class="card-text">Review: Enjoyed a delicious breakfast with friends at this popular 
+                                spot. Great oriental decor, generous portions, and light, flavorful bread. 5 
+                                people spend around RM65 only - Good Value!</p>
+                            <a href="https://maps.app.goo.gl/n2CuFiX2wUcKep8h7" target="_blank">
+                                <button class="btn-map">Google Maps</button>
+                            </a>
+                            <a href="#" data-toggle="modal" data-target="#menuModal5">
+                                <button class="btn-menu">Suggested Menu</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Restaurant Card 6 -->
+            <div class="col-md-4">
+                <div class="card restaurant-card">
+                    <img src="images/rest_guide/lepau.png" class="card-img-top" alt="Lepau Restaurant">
+                    <div class="card-body">
+                        <h5 class="card-title">Lepau Restaurant</h5>
+                        <p class="card-location">KUCHING, SARAWAK</p>
+                        <div class="card-details">
+                            <p class="card-text">Rating: ★★★★★</p>
+                            <p class="card-text">Review: Lepau Restaurant offers an authentic aboriginal 
+                                dining experience with a wide variety of unique dishes. While the flavors 
+                                may be challenging for some tourists, it's a must-visit for adventurous 
+                                eaters, especially for those curious to try their signature dish—sago worm!</p>
+                            <a href="https://maps.app.goo.gl/CNLyLcFnrWRVmJncA" target="_blank">
+                                <button class="btn-map">Google Maps</button>
+                            </a>
+                            <a href="#" data-toggle="modal" data-target="#menuModal6">
+                                <button class="btn-menu">Suggested Menu</button>
+                            </a>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+            <!-- Restaurant Card 7 -->
+            <div class="col-md-4">
+                <div class="card restaurant-card">
+                    <img src="images/rest_guide/dewan.png" class="card-img-top" alt="De.Wan 1958 by Chef Wan">
+                    <div class="card-body">
+                        <h5 class="card-title">De.Wan 1958 by Chef Wan</h5>
+                        <p class="card-location">KUALA LUMPUR</p>
+                        <div class="card-details">
+                            <p class="card-text">Rating: ★★★★★</p>
+                            <p class="card-text">Review: This is a Famous Malay Restaurant, you can had a memorable 
+                                company lunch here, enjoying fresh and generously sized seafood along with tender 
+                                chicken satay. The restaurant's beautiful ambiance is perfect for photos, though 
+                                some dishes can be quite spicy. Overall, it's an excellent spot for group dining</p>
+                            <a href="https://maps.app.goo.gl/4RxCzhDpYaXAfrmi7" target="_blank">
+                                <button class="btn-map">Google Maps</button>
+                            </a>
+                            <a href="#" data-toggle="modal" data-target="#menuModal7">
+                                <button class="btn-menu">Suggested Menu</button>
+                            </a>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Suggested Menu 1-->
+    <div class="modal fade" id="menuModal1" tabindex="-1" aria-labelledby="menuModalLabel1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="menuModalLabel1">Nur Nasuha Tomyam Seafood - Suggested Menu</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/rest_guide/A1.png" alt="Fried Rice">
+                    <p><strong>Fried Rice:</strong> A delicious, flavorful fried rice dish that's a favorite among 
+                        locals and visitors alike.</p>
+
+                    <img src="images/rest_guide/A2.png" alt="Tomyam Soup">
+                    <p><strong>Tomyam Soup:</strong> A spicy and sour soup with fresh seafood, perfect for warming 
+                        up your palate.</p>
+
+                    <img src="images/rest_guide/A3.png" alt="Omelette with Stir-fried Chicken">
+                    <p><strong>Omelette with Stir-fried Chicken:</strong> A hearty dish combining a fluffy omelette 
+                        with savory stir-fried chicken, topped with a rich sauce.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Suggested Menu 2-->
+    <div class="modal fade" id="menuModal2" tabindex="-1" aria-labelledby="menuModalLabel2" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="menuModalLabel2">Yew Kei Seafood Restaurant - Suggested Menu</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/rest_guide/B1.png" alt="Steamed Prawns with Garlic and Ginger">
+                    <p><strong>Steamed Prawns with Garlic and Ginger:</strong> These fresh prawns are steamed 
+                        to perfection, preserving their natural sweetness. Enhanced with aromatic garlic and 
+                        ginger, the dish is light yet bursting with flavor, making it a must-try for seafood 
+                        enthusiasts.</p>
+
+                    <img src="images/rest_guide/B2.png" alt="Salted Egg Crab">
+                    <p><strong>Salted Egg Crab:</strong> Experience the rich and indulgent taste of crab coated 
+                        in a creamy salted egg yolk sauce. The crabs are perfectly cooked, with a golden crust 
+                        that adds a delightful crunch to each bite.</p>
+
+                    <img src="images/rest_guide/B3.png" alt="Kam Heong Lala (Clams)">
+                    <p><strong>Kam Heong Lala (Clams):</strong> A popular Malaysian dish, these clams are 
+                        stir-fried with a fragrant blend of curry leaves, dried shrimp, and spices. The result 
+                        is a savory, slightly spicy, and incredibly flavorful dish that seafood lovers will adore.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Suggested Menu 3-->
+    <div class="modal fade" id="menuModal3" tabindex="-1" aria-labelledby="menuModalLabel3" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="menuModalLabel3">Kedai Kopi Lung Ching - Suggested Menu</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/rest_guide/C1.png" alt="Kampua">
+                    <p><strong>Kampua:</strong> A traditional Foochow noodle dish served either dry (white) or 
+                        with soy sauce (black). The noodles are topped with slices of char siu, spring onions, 
+                        and fried shallots for a savory and satisfying meal.</p>
+    
+                    <img src="images/rest_guide/C2.png" alt="Zao Cai Feng Gan">
+                    <p><strong>Zao Cai Feng Gan:</strong> A unique and flavorful soup made with preserved mustard 
+                        greens, vermicelli noodles, and minced meat. This dish offers a tangy and comforting taste 
+                        that is perfect for any time of the day.</p>
+    
+                    <img src="images/rest_guide/C3.png" alt="Kompia">
+                    <p><strong>Kompia:</strong> A traditional Foochow bagel-like bread, usually stuffed with 
+                        savory minced pork. It's crispy on the outside and soft on the inside, making it a popular 
+                        snack or breakfast item in Sarawak.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Suggested Menu 4-->
+    <div class="modal fade" id="menuModal4" tabindex="-1" aria-labelledby="menuModalLabel4" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="menuModalLabel4">Gem Restaurant Damansara - Suggested Menu</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/rest_guide/D1.png" alt="Biryani">
+                    <p><strong>Biryani:</strong> A flavorful and aromatic rice dish cooked with a blend of spices, 
+                        tender meat, and garnished with fresh herbs. Served with raita and curry, this biryani is 
+                        a hearty and satisfying meal.</p>
+
+                    <img src="images/rest_guide/D2.png" alt="Paneer Butter Masala">
+                    <p><strong>Paneer Butter Masala:</strong> A rich and creamy curry made with paneer (Indian 
+                        cottage cheese) cooked in a tomato-based sauce with butter and a blend of aromatic spices. 
+                        Perfect with naan or rice.</p>
+
+                    <img src="images/rest_guide/D3.png" alt="Sizzling Brownie with Ice Cream">
+                    <p><strong>Sizzling Brownie with Ice Cream:</strong> A decadent dessert featuring a warm brownie 
+                        served on a sizzling plate, topped with a scoop of vanilla ice cream and drizzled with 
+                        chocolate sauce. A delightful way to end your meal.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Suggested Menu 5-->
+    <div class="modal fade" id="menuModal5" tabindex="-1" aria-labelledby="menuModalLabel5" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="menuModalLabel5">Ho Kow Hainam Kopitiam - Suggested Menu</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/rest_guide/E1.png" alt="Roti Bakar with Kaya">
+                    <p><strong>Roti Bakar with Kaya:</strong> A classic Malaysian breakfast dish featuring toasted 
+                        bread served with a generous spread of kaya (coconut jam) and butter. Perfectly crispy on 
+                        the outside and soft on the inside, this dish is a must-try for anyone visiting a 
+                        traditional kopitiam.</p>
+
+                    <img src="images/rest_guide/E2.png" alt="Nasi Lemak with Fried Chicken">
+                    <p><strong>Nasi Lemak with Fried Chicken:</strong> Malaysia's national dish served with fragrant 
+                        coconut rice, crispy fried chicken, boiled egg, peanuts, anchovies, cucumber, and spicy sambal. 
+                        A hearty and flavorful meal that's sure to satisfy.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Suggested Menu 6-->
+    <div class="modal fade" id="menuModal6" tabindex="-1" aria-labelledby="menuModalLabel6" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="menuModalLabel6">Lepau Restaurant - Suggested Menu</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/rest_guide/F1.png" alt="Umai">
+                    <p><strong>Umai:</strong> A traditional Melanau dish made from raw fish marinated in lime 
+                        juice, chilies, and onions. This refreshing dish is often served as an appetizer and 
+                        offers a tangy and spicy burst of flavors.</p>
+    
+                    <img src="images/rest_guide/F2.jpg" alt="Sago Worm">
+                    <p><strong>Sago Worm:</strong> A unique delicacy from Sarawak, sago worms are typically 
+                        grilled or fried and served with a spicy dipping sauce. This adventurous dish is a 
+                        must-try for those looking to experience something truly different.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--Suggested Menu 7-->
+    <div class="modal fade" id="menuModal7" tabindex="-1" aria-labelledby="menuModalLabel7" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="menuModalLabel7">De.Wan 1958 by Chef Wan - Suggested Menu</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/rest_guide/G1.png" alt="Grilled Lobster">
+                    <p><strong>Grilled Lobster:</strong> A luxurious dish featuring perfectly grilled lobster, 
+                        served with a tangy dipping sauce. The lobster is tender and succulent, with a smoky 
+                        flavor that pairs beautifully with the fresh lime and chili garnish.</p>
+
+                    <img src="images/rest_guide/G2.png" alt="Grilled Fish">
+                    <p><strong>Grilled Fish:</strong> A traditional Malay dish, this grilled fish is marinated 
+                        in a blend of spices and herbs, then cooked to perfection over an open flame. Served with 
+                        slices of lime and onions, it's a flavorful and satisfying meal.</p>
+
+                    <img src="images/rest_guide/G3.png" alt="Chicken Satay">
+                    <p><strong>Chicken Satay:</strong> Skewers of marinated chicken grilled to perfection and served 
+                        with a rich peanut sauce. This dish is a favorite among locals and visitors alike, offering 
+                        a delightful combination of sweet, savory, and spicy flavors.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Go To Top button-->
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><span class="material-symbols-outlined">
+        ^
+        </span></button>
+
+    <!--Footer-->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="recipe.html">Recipes</a></li>
+                    <li><a href="cultural_insights.html">Cultural Insights</a></li>
+                    <li><a href="restaurant_guide.html">Restaurant Guide</a></li>
+                    <li><a href="community.html">Community</a></li>
+                    <li><a href="blog.html">Personal Blog</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section social">
+                <h3>Social Media</h3>
+                <img src="images/logo_brown.png" alt="Logo" id="logo">
+                <div class="footer-section social-info">
+                    <p>Follow us on: 
+                        <a href="https://www.facebook.com/"> 
+                            <img src="images/about_us/facebook.png" alt="Facebook">
+                        </a>
+                        <a href="https://www.instagram.com/">
+                            <img src="images/about_us/instagram.png" alt="Instagram">
+                        </a>
+                        <a href="https://x.com/">
+                            <img src="images/about_us/twitter.png" alt="Twitter">
+                        </a>
+                    </p>
+                </div>               
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Makan-makan Malaysia. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="restaurant_guide.js"></script>
+</body>
+</html>

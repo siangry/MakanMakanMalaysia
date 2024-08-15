@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="nav_footer.css">
+    <link rel="stylesheet" href="about_us_styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="recipe.html">Recipe</a></li>
+                <li><a href="cultural_insights.html">Cultural Insights</a></li>
+                <li><a href="restaurant_guide.html">Restaurant Guide</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="blog.html">Personal Blog</a></li>
+                <li><a href="about_us.html"  class="active">About Us</a></li>
+            </ul>
+        </nav>
+        <div class="logo">
+            <img src="images/logo_brown.png" alt="Makan Makan Malaysia Logo">
+        </div>
+        <div class="nav-buttons">
+            <a href="login.html" class="btn btn-login">Login</a>
+            <a href="signup.html" class="btn btn-signup">Signup</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="content">
+            <!--Header of page-->
+            <div class="page-header">
+                <h1 class="header-text">Makan Makan Malaysia, a platform to explore and share the rich tapestry of Malaysian cuisine!</h1>
+                <div class="separator"></div>
+                <p class="subtext">Our goal: To take you on a gastronomic journey<br>through the unique flavors, aromas, 
+                    and traditions<br>that make Malaysian food so special.</p>
+            </div>
+
+            <!--Mission-->
+            <div class="mission">
+                <div class="mission-left">
+                    <h2>Our Mission</h2>
+                </div>
+                <div class="mission-right">
+                    <p>
+                        Our mission is to preserve, promote, and share the rich culinary 
+                        traditions of Malaysia with the world. We aim to educate and inspire 
+                        both locals and global food lovers by providing authentic recipes, 
+                        cultural insights, and a guide to the best places to experience 
+                        Malaysian food. We believe that food is more than just sustenance—it's 
+                        a bridge to understanding cultures, building communities, and 
+                        creating unforgettable experiences.
+                    </p>
+                </div>
+            </div>
+
+            <!--Vision-->
+            <div class="vision">
+                <div class="vision-left">
+                    <p>
+                        We envision a world where Malaysian cuisine is celebrated and enjoyed globally, 
+                        where the diverse flavors and traditions of our food culture are recognized 
+                        and cherished. We strive to be the leading digital platform for all things 
+                        related to Malaysian food, from recipes and restaurant guides to cultural insights and community engagement.
+                    </p>
+                </div>
+                <div class="vision-right">
+                    <h2>Our Vision</h2>
+                </div>
+
+            </div>
+        
+            <!--Team Member section-->
+            <div class="team">
+                <h2>Meet Our team</h2>
+                <p class="team-quote">"A passionate team of food enthusiasts, cultural advocates, and digital creators united by our love for Malaysian cuisine."</p>
+                <div class="team-members">
+                    <div class="team-member">
+                        <img src="images/about_us/lce.png" alt="Lee Chea Eun">
+                        <h3>Lee Chea Eun</h3>
+                        <p>Personal Blog & Community</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/about_us/syx.png" alt="Seow Yi Xuan">
+                        <h3>Seow Yi Xuan</h3>
+                        <p>Home & Recipe</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/about_us/sry.png" alt="Siang Ruo Ying">
+                        <h3>Siang Ruo Ying</h3>
+                        <p>Cultural Insights & Login / Sign Up<br>& About Us</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/about_us/tsr.png" alt="Teng Shiaw Rong">
+                        <h3>Teng Shiaw Rong</h3>
+                        <p>Restaurant Guide & About Us</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--Contact Us-->
+            <div class="contact-us">
+                <h2>Contact Us</h2>
+                <p>We'd love to hear from you! Whether you have a question, a suggestion, or just want to share your love for Malaysian food, feel free to reach out to us through the following channels:</p>
+                
+                <div class="contact-details-left">
+                    <h3>Email</h3>
+                    <p><a href="mailto:info@makanmakanmsia.com">info@makanmakanmsia.com</a></p>
+            
+                    <h3>Phone</h3>
+                    <p>+6012-3456789</p>
+            
+                    <h3>Mailing Address</h3>
+                    <p>17 Food Street, Kuala Lumpur, Malaysia</p>
+                </div>
+                <div class="contact-details-right">
+                    <h3>Social Media</h3>
+                    <p>Follow us on:
+                        <a href="https://www.facebook.com/"> 
+                            <img src="images/about_us/facebook.png" alt="Facebook">
+                        </a>
+                        <a href="https://www.instagram.com/">
+                            <img src="images/about_us/instagram.png" alt="Instagram">
+                        </a>
+                        <a href="https://x.com/">
+                            <img src="images/about_us/twitter.png" alt="Twitter">
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!--Go To Top button-->
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><span class="material-symbols-outlined">
+            ^
+        </span></button>
+    </main>
+    <script>
+        let mybutton = document.getElementById("myBtn");
+            
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+            
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+            
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+</html>

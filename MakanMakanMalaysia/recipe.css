@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0px;
+    background-color: #ffffff;
+    font-family: 'Playfair Display', serif;
+}   
+
+
+/*Navigation for Recipe page*/
+.header-content {
+    text-align:center;
+    color: #503106;
+    width: 100%;
+    padding: 20px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-content h1 {
+    margin: 0 0 10px;
+    font-size: 2.5em;
+    color: #503106;
+}
+
+.header-content p {
+    margin: 0 0 10px;
+    font-size: 1.1em;
+    font-family: "DM Sans", system-ui;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.filter-button {
+    font-family: 'Playfair Display', serif;
+    background-color: #a68e6d;
+    border: none;
+    color: white ;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s,transform 0.2s;
+}
+.filter-button:hover, .filter-button.active {
+    background-color: #dcccb7;
+    color: #503106;
+}
+
+
+/*Recipes*/
+.recipe-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.recipe-card {
+    background-color: #ffefd9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    overflow: hidden;
+    width: 310px;
+    height: 280px;
+    transition: transform 0.3s ease;
+}
+.recipe-card:hover {
+    transform: translateY(-5px);
+}
+.recipe-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.recipe-title {
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.recipe-author {
+    padding: 10px;
+    font-size: 14px;
+    color: #666;
+    font-family: "DM Sans", system-ui;
+}
+.recipe-category {
+    padding: 10px;
+    font-size: 12px;
+    color: #999;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-family: "DM Sans", system-ui;
+}
+
+.recipe-card:hover {
+    width: 300px;
+    height:fit-content;
+    justify-content: center;
+}
+.recipe-card:hover .recipe-image {
+    width: 100%;
+}
+
+.recipe-card:hover.Ingredients {
+    padding: 10px;
+    flex:2;
+    margin-top:0;
+    width: 50%;
+    padding-left: 20px;
+    font-family: "DM Sans", system-ui;
+}
+
+.recipe-card:hover.instructions {
+    padding: 10px;
+    width: 45%;
+    text-align: left;
+    font-family: "DM Sans", system-ui;
+}
