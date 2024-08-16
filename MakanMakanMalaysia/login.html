@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Makan Makan Malaysia - Log In</title>
+    <title>Log In - Makan Makan Malaysia</title>
     <link rel="stylesheet" href="log_sign_styles.css">
 </head>
 <body>
@@ -22,14 +22,16 @@
                 <img src="images/login_signup/lock_icon.png" alt="Lock Icon" class="input-icon">
                 <input type="password" id="password" placeholder="Password" required>
             </div>
-            <button type="submit" class="login-btn">LOGIN</button>
-            <div class="login-remember-me">
-                <label>
-                    <input type="checkbox" id="rememberMe">
-                    Remember me
-                </label>
-            </div>
+            <button class="login-btn" onclick="login()">LOGIN</button>
         </form>
+        <div class="login-remember-me">
+            <label>
+                <input type="checkbox" id="rememberMe">RememberMe
+            </label>
+        </div>
+        <div class="login-signup-link">
+            <p>Don't have an account? <a href="signup.html">Sign up here</a></p>
+        </div>
     </div>
     <div class="login-deco">
         <img src="images/login_signup/deco_img.png" alt="Login Background">
