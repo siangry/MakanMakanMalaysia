@@ -8,10 +8,9 @@ body {
     font-family: 'Playfair Display', serif;
 }   
 
-
-/*Navigation for Recipe page*/
+/* Navigation for Recipe page */
 .header-content {
-    text-align:center;
+    text-align: center;
     color: #503106;
     width: 100%;
     padding: 20px 0;
@@ -36,11 +35,12 @@ body {
     justify-content: center;
     margin-bottom: 20px;
 }
+
 .filter-button {
     font-family: 'Playfair Display', serif;
     background-color: #a68e6d;
     border: none;
-    color: white ;
+    color: white;
     padding: 8px 16px;
     text-align: center;
     text-decoration: none;
@@ -49,33 +49,41 @@ body {
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 20px;
-    transition: background-color 0.3s,transform 0.2s;
+    transition: background-color 0.3s, transform 0.2s;
 }
+
 .filter-button:hover, .filter-button.active {
     background-color: #dcccb7;
     color: #503106;
 }
 
 
-/*Recipes*/
+/* Recipe cards */
 .recipe-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
 }
+
 .recipe-card {
     background-color: #ffefd9;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
     overflow: hidden;
     width: 310px;
     height: 280px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    margin: 10px;
 }
+
 .recipe-card:hover {
-    transform: translateY(-5px);
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.3);
 }
+
 .recipe-image {
     width: 100%;
     height: 200px;
@@ -87,43 +95,120 @@ body {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
+    color: #503106;
 }
 .recipe-author {
     padding: 10px;
     font-size: 14px;
-    color: #666;
+    color: blackS;
     font-family: "DM Sans", system-ui;
 }
 .recipe-category {
     padding: 10px;
     font-size: 12px;
-    color: #999;
+    color: black;
     text-transform: uppercase;
     margin-bottom: 5px;
     font-family: "DM Sans", system-ui;
 }
 
-.recipe-card:hover {
-    width: 300px;
-    height:fit-content;
-    justify-content: center;
+.Ingredients,
+.Instructions,
+.youtube-video {
+    display: none;
 }
-.recipe-card:hover .recipe-image {
+
+
+/* Detailed recipe page */
+.recipe-detail {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffefd9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.recipe-detail .recipe-image {
     width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
 }
 
-.recipe-card:hover.Ingredients {
-    padding: 10px;
-    flex:2;
-    margin-top:0;
-    width: 50%;
+.recipe-detail .recipe-info {
+    position: static;
+    background: none;
+    padding: 0;
+}
+
+.recipe-detail .Ingredients,
+.recipe-detail .Instructions,
+.recipe-detail .youtube-video {
+    display: block;
+    margin-top: 20px;
+}
+
+.recipe-detail h2 {
+    margin-top: 0px;
+    font-size: 30px;
+}
+
+.recipe-detail .recipe-category {
+    margin-top: -25px;
+    font-size: 14px;
+}
+
+.recipe-detail .recipe-author {
+    font-size: 18px;
+    margin-top: 0px;
+}
+
+.recipe-detail h3 {
+    color: #503106;
+    margin-bottom: 10px;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.recipe-detail ul,
+.recipe-detail ol {
     padding-left: 20px;
+    margin-left: 10px;
     font-family: "DM Sans", system-ui;
+    font-size: 17px;
 }
 
-.recipe-card:hover.instructions {
-    padding: 10px;
-    width: 45%;
-    text-align: left;
-    font-family: "DM Sans", system-ui;
+.recipe-detail .youtube-video iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+    border-radius: 8px;
+}
+
+#backButton {
+    position: fixed;
+    bottom: 20px; 
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px;
+    font-family: 'Playfair Display', serif;
+    background-color: #a68e6d;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#backButton:hover {
+    background-color: #dcccb7;
+    color: #503106;
 }

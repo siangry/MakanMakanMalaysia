@@ -89,7 +89,7 @@ header {
 footer {
     background-color: #d4c0a5;
     color: #503106;
-    padding: 40px 0;
+    padding: 40px;
 }
 
 .footer-content {
@@ -143,6 +143,7 @@ footer {
 
 
 .social {
+    flex: 20;
     font-family: "DM Sans", system-ui;
 }
 
@@ -156,7 +157,7 @@ footer {
     margin-right: auto;
     margin-top: 20px;
     margin-bottom: 20px;
-    width: 300px;  
+    width: 200px;  
 }
 
 .social-info img {
@@ -207,7 +208,7 @@ footer {
   
   
   @media (min-width: 768px) {
-      .newsletter {
+      .social {
           flex-basis: 30%;
       }
       
