@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const eras = {
         'pre-colonial': {
-            image: 'images/ci/precolonial.webp',
+            image: 'images/ci/precolonial.jpg',
             description: 'Indigenous ingredients like rice, coconut, bananas, and spices were staples. Cooking methods included grilling, steaming, and boiling.'
         },
         'colonial': {
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
             description: 'Indian influence is seen in the use of spices, rice dishes, and vegetarian meals, adding diversity to Malaysian cuisine.'
         },
         'modern': {
-            image: 'images/ci/modern.webp',
+            image: 'images/ci/modern.jpg',
             description: 'Modern Malaysian cuisine is a fusion of traditional and contemporary influences, incorporating global culinary trends.'
         }
     };
